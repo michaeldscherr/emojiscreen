@@ -38,23 +38,46 @@
                         <a href="https://github.com/brittanyrw/emojiscreen" target="_blank">Contribute</a>
                     </div>
                 </div>
-                <div class="filter-content" style="margin-top: 2rem;">
-                    <select class="js-input-filter" name="year" data-input="year">
-                        <option value="">Select a Year</option>
-                    </select>
+                <div class="filter-bar">
+                    <h2 class="filter-bar__title">
+                        Filters
+                    </h2>
 
-                    <select class="js-input-filter" name="genre" data-input="genre">
-                        <option value="">Select a Genre</option>
-                    </select>
-
-                    <select class="js-input-filter" name="type" data-input="type">
-                        <option value="">Select a Type</option>
-                    </select>
+                    <div class="filter-bar__rows">
+                        <div class="filter-bar__row">
+                            <div class="filter-bar__row-title">
+                                Year:
+                            </div>
+    
+                            <select class="filter-bar__items" data-filter-items="year">
+                                <option value="">Select a Year</option>
+                            </select>
+                        </div>
+                        <div class="filter-bar__row">
+                            <div class="filter-bar__row-title">
+                                Genre:
+                            </div>
+    
+                            <select class="filter-bar__items" data-filter-items="genre">
+                                <option value="">Select a Genre</option>
+                            </select>
+                        </div>
+                        <div class="filter-bar__row">
+                            <div class="filter-bar__row-title">
+                                Type:
+                            </div>
+    
+                            <select class="filter-bar__items" data-filter-items="type">
+                                <option value="">Select a Type</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </header>
             <section id="emojis"></section>
         </main>
         <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jets/0.14.1/jets.min.js" integrity="sha256-vK1NwW4qZ7Di37tr77C07hD7SVam7CpLdRxBK8M43jc=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="app.js"></script>
     </body>

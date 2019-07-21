@@ -94,38 +94,38 @@ $(document).ready(function() {
           max: max,
           min: min,
           values: filters.years.map(function(year) {
-            var option = $('<option>');
+            var elem = $('<option />');
     
-            option.val(year).text(year);
+            elem.text(year).val(year);
     
-            return option;
+            return elem;
           })
         }
       })();
 
       var genres = filters.genres.map(function(genre) {
-        var option = $('<option>');
+        var elem = $('<option />');
+    
+        elem.text(genre).val(genre);
 
-        option.val(genre).text(genre);
-
-        return option;
+        return elem;
       });
 
       var types = filters.types.map(function(type) {
-        var option = $('<option>');
+        var elem = $('<option />');
+    
+        elem.text(type).val(type);
 
-        option.val(type).text(type);
-
-        return option;
+        return elem;
       });
 
-      var inputYears = $('[data-input="year"]');
-      var inputGenres = $('[data-input="genre"]');
-      var inputTypes = $('[data-input="type"]');
+      var filterYears = $('[data-filter-items="year"]');
+      var filterGenre = $('[data-filter-items="genre"]');
+      var filterType = $('[data-filter-items="type"]');
 
-      inputGenres.append(genres);
-      inputTypes.append(types);
-      inputYears.append(years.values);
+      filterYears.append(years.values);
+      filterGenre.append(genres);
+      filterType.append(types);
     }
 
     function getFilters(data) {
